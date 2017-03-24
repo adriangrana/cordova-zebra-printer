@@ -30,7 +30,7 @@
     channel.waitForInitialization('onCordovaInfoReady');
 
     /**
-     * This represents the mobile device, and provides properties for inspecting the model, version, UUID of the
+     * This represents the mobile printer, and provides properties for inspecting the model, version, UUID of the
      * phone, etc.
      * @constructor
      */
@@ -43,7 +43,7 @@
     }
 
     /**
-     * Get device info
+     * Get printer info
      *
      * @param {Function} successCallback The function to call when the heading data is available
      * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
