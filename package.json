@@ -1,0 +1,38 @@
+{
+  "name": "cordova-zebra-printer",
+  "version": "1.1.6-dev",
+  "description": "Cordova Zebra Printer Plugin",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-zebra-printer",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/cordova-plugin-device"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  },
+  "author": "Apache Software Foundation",
+  "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
+}
