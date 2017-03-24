@@ -31,7 +31,7 @@ Report issues with this plugin on the [cordova-zebra-printer issue tracker](http
 
 ## Installation
 
-    cordova plugin add cordova-zebra-printer
+    cordova plugin add https://github.com/adriangrana/cordova-zebra-printer.git
 
 ## Properties
 
