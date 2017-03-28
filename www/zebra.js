@@ -25,19 +25,19 @@
         exec = require('cordova/exec'),
         cordova = require('cordova');
 
-    channel.createSticky('onCordovaInfoReady');
+    channel.createSticky('onCordovaZebraPrinterReady');
     // Tell cordova channel to wait on the CordovaInfoReady event
-    channel.waitForInitialization('onCordovaInfoReady');
+    channel.waitForInitialization('onCordovaZebraPrinterReady');
 
     /**
      * This represents the mobile printer, and provides properties for inspecting the model, version, UUID of the
      * phone, etc.
      * @constructor
      */
-    function zebra() {
+    function Zebra() {
         var me = this;
         channel.onCordovaReady.subscribe(function() {
-            channel.onCordovaInfoReady.fire();
+            channel.onCordovaZebraPrinterReady.fire();
         });
               
     }
@@ -48,12 +48,12 @@
      * @param {Function} successCallback The function to call when the heading data is available
      * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
      */
-    zebra.prototype.scan = function(successCallback, errorCallback) {
+    Zebra.prototype.scan = function(successCallback, errorCallback) {
         exec(successCallback, errorCallback, "Zebra", "scan", []);
     };
 
-    zebra.prototype.write = function(serialNumber,data,successCallback, errorCallback) {
+    Zebra.prototype.write = function(serialNumber,data,successCallback, errorCallback) {
         exec(successCallback, errorCallback, "Zebra", "write", [serialNumber,data]);
     };
     
-    module.exports = new zebra();
+    module.exports = new Zebra();
